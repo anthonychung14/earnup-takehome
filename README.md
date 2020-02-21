@@ -15,3 +15,4 @@ localhost:3000
 2. Add presence when user is online
 3. Add sent/read timestamps
 4. Add media upload to messages
+5. Add "...is typing" state to message window
