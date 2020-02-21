@@ -6,6 +6,21 @@ import { createStore, applyMiddleware, compose } from "redux";
 import { routerMiddleware } from "connected-react-router";
 import createSagaMiddleware from "redux-saga";
 import createReducer from "./reducers";
+
+import firebase from "firebase/app";
+import "firebase/database";
+import "firebase/auth";
+
+firebase.initializeApp({
+  apiKey: "AIzaSyDrdMhIgvlchqAsQMj8j_mfhhohx6PEzUU",
+  authDomain: "earnup-takehome.firebaseapp.com",
+  databaseURL: "https://earnup-takehome.firebaseio.com",
+  projectId: "earnup-takehome",
+  storageBucket: "earnup-takehome.appspot.com",
+  messagingSenderId: "1096709877389",
+  appId: "1:1096709877389:web:76b2e48ecfe1ee9a3fbcc4"
+});
+
 const sagaMiddleware = createSagaMiddleware();
 
 export default function configureStore(initialState = {}, history) {
